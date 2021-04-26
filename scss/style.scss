@@ -1,0 +1,494 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* 全域 border box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS Reset End */
+// reference doc : https://hexschool.github.io/JavaScript_HomeWork/
+
+// reference doc : file:///C:/Wenfish/%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2/hexcourse/JavaScript_HomeWork-gh-pages/index.html
+
+// scss-docs-start color-variables
+$blue: #559ac8 !default;
+$purple: #8a82cc !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #ffa782 !default;
+$yellow: #ffd366 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+$gray: #4a4a4a !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+// scss-docs-end color-variables
+
+// scss-docs-start theme-color-variables
+$footer: $blue !default;
+$line-color: lightblue !default;
+$btn1-color: $purple !default;
+$btn2-color: $orange !default;
+$btn3-color: $yellow !default;
+$btn4-color: $blue !default;
+$bg-light: $white !default;
+$font-light: $white !default;
+$font-dark: $black !default;
+$page-btn-hover: $blue !default;
+$font-second: $yellow !default;
+$font-title-color: $purple !default;
+$bg-darker: #f7f7f7;
+$border-light: $white !default;
+// scss-docs-end theme-color-variables
+
+$phoneWidth: 575.98px;
+$padWidth: 767.98px;
+// Extra small devices (portrait phones, less than 576px)
+@mixin phone {
+  @media (max-width: $phoneWidth) {
+    @content;
+  }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin tablet {
+  @media only screen and (max-width: $padWidth) {
+    @content;
+  }
+}
+
+// bg image
+$banner-img-url: "../images/the-urban-landscape-1698285.png";
+$header-img-url: "../images/Hero.png";
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 400px;
+  background-image: url($banner-img-url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 380px;
+  background-image: url($header-img-url);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px;
+  @include phone() {
+    height: 200px;
+  }
+  h1 {
+    font-size: 40px;
+    color: $font-light;
+    text-align: center;
+    margin: 90px 0;
+    @include phone() {
+      font-size: 28px;
+      margin: 36px 0;
+    }
+  }
+  select {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    outline: none;
+    border: 3px solid $border-light;
+    border-radius: 3px;
+    margin-bottom: 80px;
+    font-family: PingFangTC-Regular;
+    color: $font-dark;
+    line-height: 21px;
+    padding-left: 10px;
+    @include phone() {
+      width: 80%;
+      border: 1px solid $border-light;
+      border-radius: 2px;
+      margin-bottom: 40px;
+    }
+  }
+  .hot-section {
+    width: 80%;
+    background: $bg-light;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    @include phone() {
+      width: 95%;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 21px;
+      font-family: AppleSystemUIFont;
+      font-weight: 600;
+      margin: 20px 0 14px 26px;
+    }
+    .hot-word {
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: nowrap;
+      .btn {
+        text-align: center;
+        border: transparent;
+        border-radius: 5px;
+        font-family: PingFangTC-Regular;
+        font-size: 20px;
+        color: $font-light;
+        width: 130px;
+        height: 42px;
+        margin-right: 20px;
+        @include phone() {
+          width: 80px;
+          height: 40px;
+          margin-right: 12px;
+          font-size: 16px;
+        }
+      }
+      .btn1 {
+        margin-left: 50px;
+        background: $btn1-color;
+        @include phone() {
+          margin-left: 20px;
+        }
+      }
+      .btn2 {
+        background: $btn2-color;
+      }
+
+      .btn3 {
+        background: $btn3-color;
+      }
+
+      .btn4 {
+        background: $btn4-color;
+      }
+    }
+  }
+
+  .line {
+    width: 95%;
+    padding: 0px 2.5%;
+    border-bottom: 2px dashed $line-color;
+    position: relative;
+    margin-top: 40px;
+    .icon {
+      position: absolute;
+      bottom: -12px;
+      left: 49%;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $line-color;
+      border-radius: 50%;
+      color: $line-color;
+      text-align: center;
+      vertical-align: middle;
+      background: $bg-light;
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.content {
+  // height: 1000px;
+  background: $bg-darker;
+  padding-top: 160px;
+  @include phone() {
+    padding-top: 180px;
+  }
+  h2 {
+    font-family: SFNSDisplay;
+    font-size: 36px;
+    font-weight: 400;
+    color: $font-title-color;
+    margin: 24px 0;
+    text-align: center;
+    @include phone() {
+      margin: 0px 0px 14px 0px;
+      font-size: 28px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 5%;
+    margin-bottom: 0px;
+    li {
+      margin-left: 2%;
+      width: 45%;
+      background: $bg-light;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+      margin: 0 16px 32px 0;
+      // border: 5px solid black;
+      @include phone() {
+        width: 95%;
+      }
+      .place-img {
+        position: relative;
+        width: 100%;
+        height: 155px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E4%B8%89%E6%B0%91%E5%8D%80/%E4%B8%AD%E9%83%BD%E6%BF%95%E5%9C%B0%E5%85%AC%E5%9C%9207.jpg");
+        background-size: cover;
+        background-position: center;
+        h4 {
+          font-family: SFNSDisplay;
+          font-size: 24px;
+          color: $font-light;
+          position: absolute;
+          bottom: 14px;
+          left: 22px;
+        }
+        h5 {
+          font-family: PingFangTC-Regular;
+          font-size: 16px;
+          color: $font-light;
+          position: absolute;
+          bottom: 14px;
+          right: 22px;
+          @include tablet() {
+            display: none;
+          }
+        }
+      }
+      .place-info {
+        padding: 16px 32px 0 32px;
+        .row {
+          margin-bottom: 16px;
+          display: flex;
+          flex-wrap: nowrap;
+          span {
+            font-family: AppleSystemUIFont;
+            font-size: 16px;
+            color: $font-dark;
+            margin-left: 12px;
+          }
+          .small-icon {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            text-align: center;
+          }
+        }
+        .third-row {
+          display: flex;
+          justify-content: space-between;
+          .phone {
+            display: flex;
+          }
+
+          .tag {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .pagesRow {
+    display: flex;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    li {
+      a {
+        display: block;
+        font-family: AppleSystemUIFont;
+        font-size: 14px;
+        color: #4a4a4a;
+        padding: 8px;
+      }
+
+      .unableBtn {
+        color: rgba(73, 73, 73, 0.5);
+      }
+
+      .active {
+        color: #559ac8;
+      }
+    }
+
+    .active {
+      a {
+        background: transparent;
+        color: $page-btn-hover;
+        border: none;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $footer;
+  font-family: AppleSystemUIFont;
+  font-size: 14px;
+  text-align: center;
+  h6 {
+    color: $font-light;
+    padding: 24px 0;
+  }
+  p {
+    color: $font-second;
+    padding-bottom: 24px;
+    margin-bottom: 0px;
+  }
+}
+
+.goTop {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  @include phone() {
+    bottom: 20px;
+    right: 2px;
+  }
+}

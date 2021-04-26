@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>高雄資訊旅遊網</title>
+
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="header wrap" id="header">
+        <h1>高雄旅遊資訊網</h1>
+        ‍‍<select id="area">
+          <option value="" disabled> -- 請選擇 -- </option>
+        </select>
+        
+        <div class="hot-section">
+          <h3>熱門行政區</h3>
+          <div class="hot-word">
+            <input type="button" class="btn btn1" id="btn1" value="苓雅區"></input>
+            <input type="button" class="btn btn2" value="三民區"></input>
+            <input type="button" class="btn btn3" value="內門區"></input>
+            <input type="button" class="btn btn4" value="美濃區"></input>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="icon"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        </div>
+
+    </div>
+  
+    <div class="content wrap">
+
+          <h2 class="title">三民區</h2>
+
+          <ul class="list">
+            <li>
+              <div class="place-img">
+                <h4>中都愛河濕地公園</h4>
+                <h5>三民區</h5>
+              </div>
+              <div class="place-info">
+                <div class="row">
+                  <div class="small-icon"><img src="images/icons_clock.png" alt="time"></div>
+                  <span>全天候開放</span>
+                </div>
+                <div class="row">
+                  <div class="small-icon"><img src="images/icons_pin.png" alt="location"></div>
+                  <span>高雄市三民區同盟三路與十全三路交叉處</span>
+                </div>
+                <div class="row third-row">
+                  <div class="phone">
+                    <div class="small-icon"><img src="images/icons_phone.png" alt="phone"></div>
+                    <span>886-7-7995678</span>
+                  </div>
+                  <div class="tag">
+                    <div class="small-icon"><img src="images/icons_tag.png" alt="tag"></div>
+                    <span>免費參觀</span>
+                  </div>
+                
+              </div>
+  
+            </li>
+            <!-- <li>123</li> -->
+          </ul>
+  
+          <ul class="pagesRow" id="pageId">
+            <li> prev</li>
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li> next </li> 
+          </ul>
+
+    </div>
+  
+  
+    <div class="footer">
+      <h6>高雄旅遊網</h6>
+      <p>資料提供：高雄市政府</p>
+    </div>
+
+    
+    <img class="goTop" src="images/btn_goTop.png" alt="gotop" width="18px" height="18px">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="js/my.js"></script>
+  </body>
+</html>

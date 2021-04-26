@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* CSS Reset End */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 400px;
+  background-image: url("../images/the-urban-landscape-1698285.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 380px;
+  background-image: url("../images/Hero.png");
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px;
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    height: 200px;
+  }
+}
+
+.header h1 {
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  margin: 90px 0;
+}
+
+@media (max-width: 575.98px) {
+  .header h1 {
+    font-size: 28px;
+    margin: 36px 0;
+  }
+}
+
+.header select {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  outline: none;
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  margin-bottom: 80px;
+  font-family: PingFangTC-Regular;
+  color: #000000;
+  line-height: 21px;
+  padding-left: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .header select {
+    width: 80%;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    margin-bottom: 40px;
+  }
+}
+
+.header .hot-section {
+  width: 80%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .header .hot-section {
+    width: 95%;
+  }
+}
+
+.header .hot-section h3 {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: AppleSystemUIFont;
+  font-weight: 600;
+  margin: 20px 0 14px 26px;
+}
+
+.header .hot-section .hot-word {
+  margin-bottom: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.header .hot-section .hot-word .btn {
+  text-align: center;
+  border: transparent;
+  border-radius: 5px;
+  font-family: PingFangTC-Regular;
+  font-size: 20px;
+  color: #ffffff;
+  width: 130px;
+  height: 42px;
+  margin-right: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .header .hot-section .hot-word .btn {
+    width: 80px;
+    height: 40px;
+    margin-right: 12px;
+    font-size: 16px;
+  }
+}
+
+.header .hot-section .hot-word .btn1 {
+  margin-left: 50px;
+  background: #8a82cc;
+}
+
+@media (max-width: 575.98px) {
+  .header .hot-section .hot-word .btn1 {
+    margin-left: 20px;
+  }
+}
+
+.header .hot-section .hot-word .btn2 {
+  background: #ffa782;
+}
+
+.header .hot-section .hot-word .btn3 {
+  background: #ffd366;
+}
+
+.header .hot-section .hot-word .btn4 {
+  background: #559ac8;
+}
+
+.header .line {
+  width: 95%;
+  padding: 0px 2.5%;
+  border-bottom: 2px dashed lightblue;
+  position: relative;
+  margin-top: 40px;
+}
+
+.header .line .icon {
+  position: absolute;
+  bottom: -12px;
+  left: 49%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid lightblue;
+  border-radius: 50%;
+  color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  background: #ffffff;
+}
+
+.header .line .icon i {
+  font-size: 22px;
+}
+
+.content {
+  background: #f7f7f7;
+  padding-top: 160px;
+}
+
+@media (max-width: 575.98px) {
+  .content {
+    padding-top: 180px;
+  }
+}
+
+.content h2 {
+  font-family: SFNSDisplay;
+  font-size: 36px;
+  font-weight: 400;
+  color: #8a82cc;
+  margin: 24px 0;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .content h2 {
+    margin: 0px 0px 14px 0px;
+    font-size: 28px;
+  }
+}
+
+.content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 5%;
+  margin-bottom: 0px;
+}
+
+.content .list li {
+  margin-left: 2%;
+  width: 45%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 16px 32px 0;
+}
+
+@media (max-width: 575.98px) {
+  .content .list li {
+    width: 95%;
+  }
+}
+
+.content .list li .place-img {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E4%B8%89%E6%B0%91%E5%8D%80/%E4%B8%AD%E9%83%BD%E6%BF%95%E5%9C%B0%E5%85%AC%E5%9C%9207.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.content .list li .place-img h4 {
+  font-family: SFNSDisplay;
+  font-size: 24px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 14px;
+  left: 22px;
+}
+
+.content .list li .place-img h5 {
+  font-family: PingFangTC-Regular;
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 14px;
+  right: 22px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .content .list li .place-img h5 {
+    display: none;
+  }
+}
+
+.content .list li .place-info {
+  padding: 16px 32px 0 32px;
+}
+
+.content .list li .place-info .row {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.content .list li .place-info .row span {
+  font-family: AppleSystemUIFont;
+  font-size: 16px;
+  color: #000000;
+  margin-left: 12px;
+}
+
+.content .list li .place-info .row .small-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content .list li .place-info .third-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .list li .place-info .third-row .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .list li .place-info .third-row .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .pagesRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 0px;
+}
+
+.content .pagesRow li a {
+  display: block;
+  font-family: AppleSystemUIFont;
+  font-size: 14px;
+  color: #4a4a4a;
+  padding: 8px;
+}
+
+.content .pagesRow li .unableBtn {
+  color: rgba(73, 73, 73, 0.5);
+}
+
+.content .pagesRow li .active {
+  color: #559ac8;
+}
+
+.content .pagesRow .active a {
+  background: transparent;
+  color: #559ac8;
+  border: none;
+  font-size: 16px;
+}
+
+.footer {
+  background: #559ac8;
+  font-family: AppleSystemUIFont;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer h6 {
+  color: #ffffff;
+  padding: 24px 0;
+}
+
+.footer p {
+  color: #ffd366;
+  padding-bottom: 24px;
+  margin-bottom: 0px;
+}
+
+.goTop {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+}
+
+@media (max-width: 575.98px) {
+  .goTop {
+    bottom: 20px;
+    right: 2px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
